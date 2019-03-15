@@ -1,6 +1,6 @@
 <?php
 
-namespace Nayjest\Grids;
+namespace Centeron\Grids;
 
 class SelectFilterConfig extends FilterConfig
 {

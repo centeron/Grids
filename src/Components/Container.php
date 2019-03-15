@@ -1,7 +1,7 @@
 <?php
-namespace Nayjest\Grids\Components;
+namespace Centeron\Grids\Components;
 
-use Nayjest\Grids\Components\Base\RenderableRegistry;
+use Centeron\Grids\Components\Base\RenderableRegistry;
 
 class Container extends RenderableRegistry
 {

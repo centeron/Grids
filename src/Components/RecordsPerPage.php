@@ -1,7 +1,7 @@
 <?php
-namespace Nayjest\Grids\Components;
+namespace Centeron\Grids\Components;
 
-use Nayjest\Grids\Components\Base\RenderableComponent;
+use Centeron\Grids\Components\Base\RenderableComponent;
 
 /**
  * Class RecordsPerPage
@@ -9,7 +9,7 @@ use Nayjest\Grids\Components\Base\RenderableComponent;
  * The component renders control
  * for switching count of records displayed per page.
  *
- * @package Nayjest\Grids\Components
+ * @package Centeron\Grids\Components
  */
 class RecordsPerPage extends RenderableComponent
 {

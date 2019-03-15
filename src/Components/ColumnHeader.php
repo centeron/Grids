@@ -1,14 +1,14 @@
 <?php
-namespace Nayjest\Grids\Components;
+namespace Centeron\Grids\Components;
 
-use Nayjest\Grids\FieldConfig;
+use Centeron\Grids\FieldConfig;
 
 /**
  * Class ColumnHeader
  *
  * The component for rendering column header
  *
- * @package Nayjest\Grids\Components
+ * @package Centeron\Grids\Components
  */
 class ColumnHeader extends TableCell
 {

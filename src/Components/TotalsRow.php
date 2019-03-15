@@ -1,16 +1,16 @@
 <?php
-namespace Nayjest\Grids\Components;
+namespace Centeron\Grids\Components;
 
 use LogicException;
-use Nayjest\Grids\Components\Base\RenderableComponentInterface;
-use Nayjest\Grids\Components\Base\TComponent;
-use Nayjest\Grids\Components\Base\TComponentView;
-use Nayjest\Grids\ArrayDataRow;
-use Nayjest\Grids\DataProvider;
-use Nayjest\Grids\DataRow;
-use Nayjest\Grids\FieldConfig;
-use Nayjest\Grids\IdFieldConfig;
-use Nayjest\Grids\Grid;
+use Centeron\Grids\Components\Base\RenderableComponentInterface;
+use Centeron\Grids\Components\Base\TComponent;
+use Centeron\Grids\Components\Base\TComponentView;
+use Centeron\Grids\ArrayDataRow;
+use Centeron\Grids\DataProvider;
+use Centeron\Grids\DataRow;
+use Centeron\Grids\FieldConfig;
+use Centeron\Grids\IdFieldConfig;
+use Centeron\Grids\Grid;
 use Illuminate\Support\Facades\Event;
 
 /**
@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Event;
  *
  * The component renders row with totals for current page.
  *
- * @package Nayjest\Grids\Components
+ * @package Centeron\Grids\Components
  */
 class TotalsRow extends ArrayDataRow implements RenderableComponentInterface
 {

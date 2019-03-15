@@ -1,5 +1,5 @@
 <?php
-namespace Nayjest\Grids;
+namespace Centeron\Grids;
 
 class FilterConfig
 {

@@ -1,14 +1,14 @@
 <?php
-namespace Nayjest\Grids\Components;
+namespace Centeron\Grids\Components;
 
-use Nayjest\Grids\Grid;
+use Centeron\Grids\Grid;
 
 /**
  * Class ColumnHeadersRow
  *
  * The component for rendering table row with column headers.
  *
- * @package Nayjest\Grids\Components
+ * @package Centeron\Grids\Components
  */
 class ColumnHeadersRow extends HtmlTag
 {

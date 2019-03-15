@@ -1,42 +1,42 @@
 <?php
-namespace Nayjest\Grids\Build;
+namespace Centeron\Grids\Build;
 
 use Closure;
 use DB;
 use LogicException;
-use Nayjest\Builder\Blueprint;
-use Nayjest\Builder\BlueprintsCollection;
-use Nayjest\Builder\Builder;
-use Nayjest\Builder\Env;
-use Nayjest\Builder\Instructions\Base\Instruction;
-use Nayjest\Builder\Instructions\Mapping\Build;
-use Nayjest\Builder\Instructions\Mapping\BuildChildren;
-use Nayjest\Builder\Instructions\CustomInstruction;
-use Nayjest\Builder\Instructions\Mapping\CallMethodWith;
-use Nayjest\Builder\Instructions\Mapping\CustomMapping;
-use Nayjest\Builder\Instructions\Mapping\Rename;
-use Nayjest\Builder\Instructions\SimpleValueAsField;
-use Nayjest\Builder\Scaffold;
-use Nayjest\Grids\Build\Instructions\BuildDataProvider;
-use Nayjest\Grids\EloquentDataProvider;
+use Centeron\Builder\Blueprint;
+use Centeron\Builder\BlueprintsCollection;
+use Centeron\Builder\Builder;
+use Centeron\Builder\Env;
+use Centeron\Builder\Instructions\Base\Instruction;
+use Centeron\Builder\Instructions\Mapping\Build;
+use Centeron\Builder\Instructions\Mapping\BuildChildren;
+use Centeron\Builder\Instructions\CustomInstruction;
+use Centeron\Builder\Instructions\Mapping\CallMethodWith;
+use Centeron\Builder\Instructions\Mapping\CustomMapping;
+use Centeron\Builder\Instructions\Mapping\Rename;
+use Centeron\Builder\Instructions\SimpleValueAsField;
+use Centeron\Builder\Scaffold;
+use Centeron\Grids\Build\Instructions\BuildDataProvider;
+use Centeron\Grids\EloquentDataProvider;
 
 /**
  * Class Setup
  *
- * This class prepares environment for nayjest/builder package for usage with grids.
- * Integration with nayjest/builder package allows to construct grids from configuration in form of php array.
+ * This class prepares environment for Centeron/builder package for usage with grids.
+ * Integration with Centeron/builder package allows to construct grids from configuration in form of php array.
  *
  * @See \Grids::make
  *
  * @internal
- * @package Nayjest\Grids\Build
+ * @package Centeron\Grids\Build
  */
 class Setup
 {
-    const COLUMN_CLASS = 'Nayjest\Grids\FieldConfig';
-    const COMPONENT_CLASS = 'Nayjest\Grids\Components\Base\ComponentInterface';
-    const GRID_CLASS = 'Nayjest\Grids\GridConfig';
-    const FILTER_CLASS = 'Nayjest\Grids\FilterConfig';
+    const COLUMN_CLASS = 'Centeron\Grids\FieldConfig';
+    const COMPONENT_CLASS = 'Centeron\Grids\Components\Base\ComponentInterface';
+    const GRID_CLASS = 'Centeron\Grids\GridConfig';
+    const FILTER_CLASS = 'Centeron\Grids\FilterConfig';
 
     /**
      * @var BlueprintsCollection
@@ -121,11 +121,11 @@ class Setup
 
             new CustomInstruction(function (Scaffold $s) {
                 if ($s->input instanceof Closure) {
-                    $s->class = 'Nayjest\Grids\Components\RenderFunc';
+                    $s->class = 'Centeron\Grids\Components\RenderFunc';
                     $s->constructor_arguments = [$s->input];
                     $s->input = [];
                 } elseif (is_string($s->input)) {
-                    $s->class = 'Nayjest\Grids\Components\RenderFunc';
+                    $s->class = 'Centeron\Grids\Components\RenderFunc';
                     $out = $s->input;
                     $s->constructor_arguments = [function () use ($out) {
                         return $out;
@@ -137,7 +137,7 @@ class Setup
                 if (strpos($type, '\\') !== false) {
                     $s->class = $type;
                 } else {
-                    $s->class = 'Nayjest\Grids\Components\\' . str_replace(
+                    $s->class = 'Centeron\Grids\Components\\' . str_replace(
                             ' ',
                             '',
                             ucwords(str_replace(array('-', '_'), ' ', $type))
@@ -166,7 +166,7 @@ class Setup
             new CustomMapping('type', function ($type, Scaffold $s) {
                 switch($type) {
                     case 'select':
-                        $s->class = 'Nayjest\Grids\SelectFilterConfig';
+                        $s->class = 'Centeron\Grids\SelectFilterConfig';
                         break;
                     default:
                         break;

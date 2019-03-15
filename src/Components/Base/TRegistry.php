@@ -1,8 +1,8 @@
 <?php
-namespace Nayjest\Grids\Components\Base;
+namespace Centeron\Grids\Components\Base;
 
 use Illuminate\Support\Collection;
-use Nayjest\Grids\Grid;
+use Centeron\Grids\Grid;
 
 trait TRegistry
 {

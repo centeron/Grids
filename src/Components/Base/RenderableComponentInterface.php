@@ -1,12 +1,12 @@
 <?php
-namespace Nayjest\Grids\Components\Base;
+namespace Centeron\Grids\Components\Base;
 
 /**
  * Interface RenderableComponentInterface
  *
  * Interface for grid components that can be rendered.
  *
- * @package Nayjest\Grids\Components\Base
+ * @package Centeron\Grids\Components\Base
  */
 interface RenderableComponentInterface extends
     RenderableInterface,

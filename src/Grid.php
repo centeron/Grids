@@ -1,10 +1,10 @@
 <?php
-namespace Nayjest\Grids;
+namespace Centeron\Grids;
 
 use Event;
 use Cache;
-use Nayjest\Grids\Components\TFoot;
-use Nayjest\Grids\Components\THead;
+use Centeron\Grids\Components\TFoot;
+use Centeron\Grids\Components\THead;
 use View;
 
 class Grid
@@ -38,7 +38,7 @@ class Grid
         }
 
         $this->initializeComponents();
-        Event::fire(self::EVENT_CREATE, $this);
+        Event::dispatch(self::EVENT_CREATE, $this);
     }
 
     /**
@@ -67,7 +67,7 @@ class Grid
         $this->getFiltering()->apply();
         $this->prepareColumns();
         $this->getSorter()->apply();
-        Event::fire(self::EVENT_PREPARE, $this);
+        Event::dispatch(self::EVENT_PREPARE, $this);
         $this->prepared = true;
     }
 

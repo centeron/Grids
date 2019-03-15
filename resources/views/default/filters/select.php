@@ -1,6 +1,6 @@
 <?php
-/** @var Nayjest\Grids\Filter $filter */
-/** @var Nayjest\Grids\SelectFilterConfig $cfg */
+/** @var Centeron\Grids\Filter $filter */
+/** @var Centeron\Grids\SelectFilterConfig $cfg */
 $cfg = $filter->getConfig();
 $onchange = '';
 if (method_exists($cfg, 'isSubmittedOnChange') && $cfg->isSubmittedOnChange()) {

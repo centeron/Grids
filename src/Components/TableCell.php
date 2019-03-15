@@ -1,15 +1,15 @@
 <?php
 
-namespace Nayjest\Grids\Components;
+namespace Centeron\Grids\Components;
 
-use Nayjest\Grids\FieldConfig;
+use Centeron\Grids\FieldConfig;
 
 /**
  * Class TableCell
  * 
  * The component for rendering TD html tag inside grid.
  *
- * @package Nayjest\Grids\Components
+ * @package Centeron\Grids\Components
  */
 class TableCell extends HtmlTag
 {

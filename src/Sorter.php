@@ -1,12 +1,12 @@
 <?php
-namespace Nayjest\Grids;
+namespace Centeron\Grids;
 
 /**
  * Class Sorter
  *
  * Data sorting manager.
  *
- * @package Nayjest\Grids
+ * @package Centeron\Grids
  */
 class Sorter
 {

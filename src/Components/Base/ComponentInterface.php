@@ -1,7 +1,7 @@
 <?php
-namespace Nayjest\Grids\Components\Base;
+namespace Centeron\Grids\Components\Base;
 
-use Nayjest\Grids\Grid;
+use Centeron\Grids\Grid;
 
 /**
  * Interface ComponentInterface
@@ -11,7 +11,7 @@ use Nayjest\Grids\Grid;
  * Basically, component is an object that can be attached
  * to grid components hierarchy and react to initialize & prepare calls.
  *
- * @package Nayjest\Grids\Components\Base
+ * @package Centeron\Grids\Components\Base
  */
 interface ComponentInterface extends TaggableInterface
 {

@@ -1,6 +1,6 @@
 <span>Records per page</span>
 <?php
-/** @var Nayjest\Grids\Components\RecordsPerPage $component */
+/** @var Centeron\Grids\Components\RecordsPerPage $component */
 echo \Form::select(
     $component->getInputName(),
     $component->getVariants(),

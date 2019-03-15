@@ -3,23 +3,7 @@ Grids
 
 ### `Data Grids Framework for Laravel`
 
-[![Codacy Badge](https://www.codacy.com/project/badge/4c6955da466a45c1a64972bbfb81fcb7)](https://www.codacy.com/public/mail_2/Grids)
-[![Code Climate](https://codeclimate.com/github/Nayjest/Grids/badges/gpa.svg)](https://codeclimate.com/github/Nayjest/Grids)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Nayjest/Grids/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Nayjest/Grids/?branch=master)
-[![Circle CI](https://circleci.com/gh/Nayjest/Grids/tree/master.svg?style=svg)](https://circleci.com/gh/Nayjest/Grids/tree/master)
-[![Release](https://img.shields.io/packagist/v/nayjest/grids.svg)](https://packagist.org/packages/nayjest/grids)
-[![HHVM Status](http://hhvm.h4cc.de/badge/nayjest/grids.svg)](http://hhvm.h4cc.de/package/nayjest/grids)
-[![Join the chat at https://gitter.im/Nayjest/Grids](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Nayjest/Grids?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 Both Laravel 4 and Laravel 5 are supported.
-
-**Announcement: Further development moved to [view-components/grids](https://github.com/view-components/grids).** view-components/grids package is framework-agnostic, but it's easy to integrate with Laravel using [view-components/eloquent-data-processing](https://github.com/view-components/eloquent-data-processing) package.
-
-- If you need stability, use nayjest/grids
-- If you need more features and flexibility, try view-components/grids
-- Pull-requests from 3rd-party contributors containing new features can be accepted to nayjest/grids just in case when it doesn't break backward compatibility. If you have some radical improvements, please contribute to view-components/grids.
-
-
 
 ## Features
 * Data providers (php array, Eloquent model, Doctrine DBAL query object)
@@ -32,6 +16,7 @@ Both Laravel 4 and Laravel 5 are supported.
 * Component architecture
 * Declarative approach
 * Constructing grids via strict object oriented API or configuration in php arrays
+* Useful GridHelper helps to build tables fast
 * Rich variety of components:
   - Excel and CSV export
   - _Records per page_ dropdown
@@ -41,14 +26,6 @@ Both Laravel 4 and Laravel 5 are supported.
   - Totals calculation (sum, average value, records count, etc)
   - Pagination
   - etc
-
-## Upcoming Features (moved to view-components/grids)
-* Autodetecting columns based on Eloquent model (if not specified)
-* Builtin output formatters for different column types
-* Working with json data sources via ajax
-* Check compatibility with Lumen microframework
-
-[Ask for more features](https://github.com/Nayjest/Grids/issues). You are welcome!
 
 ## Requirements
 
@@ -60,47 +37,47 @@ Both Laravel 4 and Laravel 5 are supported.
 
 ##### Step 1: Install package using [Composer](https://getcomposer.org)
 
-Add nayjest/grids to "require" section of your composer.json
+Add centeron/laravel-grids to "require" section of your composer.json
 
-```javascript
+```
 "require": {
-    "nayjest/grids": "^1.3.1"
+    "centeron/laravel-grids": "^1.3.1"
 },
 ```
 
 For Laravel 5 you also need to add "laravelcollective/html":
 
-```javascript
+```
 "require": {
-    "nayjest/grids": "^1.3.1",
+    "centeron/laravel-grids": "^1.3.1",
     "laravelcollective/html": "^5"
 },
 ```
 
 Then install dependencies using following command:
-```bash    
-php composer.phar install
+``` bash  
+php composer install
 ```
 
 Instead of editing composer.json and executing _composer install_ you can just run following command:
 
 For Laravel 4
 ```bash    
-php composer.phar require nayjest/grids
+php composer require centeron/laravel-grids
 ```
 For Laravel 5
 ```bash    
-php composer.phar require nayjest/grids laravelcollective/html
+php composer require centeron/laravel-grids laravelcollective/html
 ```
 
 ##### Step 2: Laravel Setup
 Add following line to 'providers' section of app/config/app.php file:
 ```php
-'Nayjest\Grids\ServiceProvider',
+'Centeron\Grids\ServiceProvider',
 ```
 For Laravel 5 you also need to add "illuminate/html" service provider:
 ```php
-'Nayjest\Grids\ServiceProvider',
+'Centeron\Grids\ServiceProvider',
 'Collective\Html\HtmlServiceProvider',
 ```
 
@@ -108,40 +85,10 @@ You may also add facade aliases to your application configuration:
 ```php
     'Form'  => 'Collective\Html\FormFacade',
     'HTML'  => 'Collective\Html\HtmlFacade',
-    'Grids'     => 'Nayjest\Grids\Grids',
+    'Grids'     => 'Centeron\Grids\Grids',
 ```
-## Demo
-
-Demonstration available [here](http://grids-demo.herokuapp.com/demo/example4)
-
-[Code](https://github.com/Nayjest/grids-demo)
-
-
 
 ## Usage
-
-#### Basic example
-
-In example below grid is configured by php array using [Nayjest/Builder](https://github.com/Nayjest/Builder) package facilities.
-
-```php
-$cfg = [
-    'src' => 'App\User',
-    'columns' => [
-            'id',
-            'name',
-            'email',
-            'country'
-    ]
-];
-echo Grids::make($cfg);
-```
-
-Results available [here](http://grids-demo.herokuapp.com/demo/example1). For more details see [demo application repository](https://github.com/Nayjest/grids-demo/blob/master/app/Http/Controllers/DemoController.php)
-
-#### Advanced example
-
-If you don't like plain arrays, you can construct grids using object oriented api:
 
 ##### Step 1. Instantiate & Configure Grid
 
@@ -154,7 +101,6 @@ $query = (new User)
     ->newQuery()
     ->with('posts')
     ->where('role', '=', User::ROLE_AUTHOR);
-
 
 			
 # Instantiate & Configure Grid
@@ -323,7 +269,7 @@ Quick links:
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 ```
-* Nayjest\Grids\Components\Pager component works only with Laravel 4.X, for Laravel 5 use Nayjest\Grids\Components\Laravel5\Pager
+* Centeron\Grids\Components\Pager component works only with Laravel 4.X, for Laravel 5 use Centeron\Grids\Components\Laravel5\Pager
 
 ##### Working with related Eloquent models
 
@@ -362,87 +308,3 @@ $query = Customer
 	,
 ...
 ```
-
-## Upgrade Guide
-
-### From 0.9.X to 1.X
-
-There are full backward compatibility between 0.9.X and 1.X branches.
-
-### From 0.8.X to 0.9.X
-
-Grids starting from v 0.9.0 uses "laravelcollective\html" instead of outdated "illuminate\html".
-
-You may continue to use illuminate\html, but it's recommended to replace it to laravelcollective\html.
-
-1. Replace illuminate\html to laravelcollective\html in composer.json
-
-2. Replace class aliases section in config/app.php ('Illuminate\Html\HtmlFacade' to 'Collective\Html\FormFacade' and 'Illuminate\Html\HtmlFacade' to 'Collective\Html\HtmlFacade')
-
-3. Replace 'Illuminate\Html\HtmlServiceProvider' to 'Collective\Html\HtmlServiceProvider'
-
-4. Run composer update
-
-### From 0.3.X to 0.4.X
-
-1. Use THead & TFoot instead of Header & Footer components
-2. If you have customized grid view (grid.php), refactor it using changes in default view
-3. Some components became default, so you don't need to add it to configuration
-
-Default components hierarchy:
-```
-- GridConfig
-    - THead
-        - ColumnHeadersRow
-        - FiltersRow
-    - TFoot
-        - OneCellRow
-            - Pager
-        
-```
-For adding child components to default one, resolve it by name and use addComponent / addComponents methods.
-
-Example:
-```php
-...
-(new GridConfig)
-    ->setDataProvider($provider)
-    ->getComponentByName(THead::NAME)
-        ->getComponentByName(FiltersRow::NAME)
-            ->addComponent(
-                (new HtmlTag)
-                    ->setTagName('button')
-                    ->setContent('Filter')
-                    ->setAttributes([
-                        'type' => 'submit',
-                        'class' => 'btn btn-success btn-sm'
-                    ])
-                    ->setRenderSection('filters_row_column_Actions')
-            )
-            ->getParent()
-        ->getParent()
-    ->setColumns([
-...    
-```
-
-Note that setComponents method rewrites components structure provided by defaults.
-
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
-
-## Security
-
-If you discover any security related issues, please email mail@vitaliy.in instead of using the issue tracker.
-
-## License
-
-© 2014&mdash;2017 Vitalii Stepanenko
-
-Licensed under the MIT License. 
-
-Please see [License File](LICENSE) for more information.
-
-##
-
-[![Flag Counter](http://s07.flagcounter.com/count/0LAb/bg_FFFFFF/txt_000000/border_FFFFFF/columns_8/maxflags_8/viewers_0/labels_0/pageviews_0/flags_0/percent_1/)](http://info.flagcounter.com/0LAb)

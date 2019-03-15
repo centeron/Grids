@@ -1,14 +1,14 @@
 <?php
-namespace Nayjest\Grids;
+namespace Centeron\Grids;
 
 use Illuminate\Support\Collection;
-use Nayjest\Grids\Components\Base\RenderableComponentInterface;
-use Nayjest\Grids\Components\Base\TComponent;
-use Nayjest\Grids\Components\Base\TRegistry;
-use Nayjest\Grids\Components\Base\RegistryInterface;
-use Nayjest\Grids\Components\TFoot;
-use Nayjest\Grids\Components\THead;
-use Nayjest\Grids\Components\Tr;
+use Centeron\Grids\Components\Base\RenderableComponentInterface;
+use Centeron\Grids\Components\Base\TComponent;
+use Centeron\Grids\Components\Base\TRegistry;
+use Centeron\Grids\Components\Base\RegistryInterface;
+use Centeron\Grids\Components\TFoot;
+use Centeron\Grids\Components\THead;
+use Centeron\Grids\Components\Tr;
 
 class GridConfig implements RegistryInterface
 {

@@ -1,3 +1,3 @@
 <?php
-use Nayjest\Grids\Grids as Base;
+use Centeron\Grids\Grids as Base;
 class Grids extends Base {}

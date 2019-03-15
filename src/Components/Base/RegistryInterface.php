@@ -1,12 +1,12 @@
 <?php
-namespace Nayjest\Grids\Components\Base;
+namespace Centeron\Grids\Components\Base;
 
 /**
  * Interface RegistryInterface
  *
  * Interface of Grid components registry
  *
- * @package Nayjest\Grids\Components\Base
+ * @package Centeron\Grids\Components\Base
  */
 interface RegistryInterface
 {

@@ -1,5 +1,5 @@
 <?php
-namespace Nayjest\Grids;
+namespace Centeron\Grids;
 
 use Input;
 use Request;
@@ -10,7 +10,7 @@ use Form;
  *
  * This class manages input processing for grid.
  *
- * @package Nayjest\Grids
+ * @package Centeron\Grids
  */
 class GridInputProcessor
 {

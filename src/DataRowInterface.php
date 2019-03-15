@@ -1,12 +1,12 @@
 <?php
-namespace Nayjest\Grids;
+namespace Centeron\Grids;
 
 /**
  * Interface DataRowInterface
  *
  * Interface for row of data received from data provider.
  *
- * @package Nayjest\Grids
+ * @package Centeron\Grids
  */
 interface DataRowInterface
 {

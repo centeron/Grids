@@ -1,15 +1,15 @@
 <?php
-namespace Nayjest\Grids;
+namespace Centeron\Grids;
 
-use Nayjest\Builder\Env;
-use Nayjest\Grids\Build\Setup;
+use Centeron\Builder\Env;
+use Centeron\Grids\Build\Setup;
 
 /**
  * Class Grids
  *
  * Facade for constructing grids using configurations.
  *
- * @package Nayjest\Grids
+ * @package Centeron\Grids
  */
 class Grids {
 
@@ -18,7 +18,7 @@ class Grids {
     /**
      * Returns builder instance.
      *
-     * @return \Nayjest\Builder\Builder
+     * @return \Centeron\Builder\Builder
      */
     protected static function getBuilder()
     {
@@ -47,7 +47,7 @@ class Grids {
      * Returns collection containing
      * blueprints required to construct grids from configuration.
      *
-     * @return \Nayjest\Builder\BlueprintsCollection
+     * @return \Centeron\Builder\BlueprintsCollection
      */
     public static function blueprints()
     {

@@ -1,5 +1,5 @@
 <?php
-/** @var Nayjest\Grids\Filter $filter */
+/** @var Centeron\Grids\Filter $filter */
 ?>
 
 <input

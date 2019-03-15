@@ -1,5 +1,5 @@
 <?php
-namespace Nayjest\Grids\Components\Base;
+namespace Centeron\Grids\Components\Base;
 
 use View;
 
@@ -11,7 +11,7 @@ use View;
  * @todo Avoid usage of Laravel Facade aliases (?)
  * @todo Absence of getViewData isn't convenient (?)
  *
- * @package Nayjest\Grids\Components\Base
+ * @package Centeron\Grids\Components\Base
  */
 trait TRenderable
 {

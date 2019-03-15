@@ -1,5 +1,5 @@
 <?php
-namespace Nayjest\Grids;
+namespace Centeron\Grids;
 
 use Illuminate\Database\Eloquent\Builder;
 use Event;
@@ -91,7 +91,7 @@ class EloquentDataProvider extends DataProvider
             $item = $this->iterator->current();
             $this->iterator->next();
             $row = new EloquentDataRow($item, $this->getRowId());
-            Event::fire(self::EVENT_FETCH_ROW, [$row, $this]);
+            Event::dispatch(self::EVENT_FETCH_ROW, [$row, $this]);
             return $row;
         } else {
             return null;

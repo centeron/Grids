@@ -1,16 +1,16 @@
 <?php
-namespace Nayjest\Grids\Components\Base;
+namespace Centeron\Grids\Components\Base;
 
-use Nayjest\Grids\Grid;
+use Centeron\Grids\Grid;
 
 /**
  * Class TComponent
  *
  * ComponentInterface interface implementation.
  *
- * @see Nayjest\Grids\Components\Base\ComponentInterface
+ * @see Centeron\Grids\Components\Base\ComponentInterface
  *
- * @package Nayjest\Grids\Components\Base
+ * @package Centeron\Grids\Components\Base
  */
 trait TComponent
 {

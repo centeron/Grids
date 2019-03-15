@@ -1,5 +1,5 @@
 <?php
-namespace Nayjest\Grids;
+namespace Centeron\Grids;
 
 use Illuminate\Support\Collection;
 
@@ -8,7 +8,7 @@ use Illuminate\Support\Collection;
  *
  * This class describes grid column.
  *
- * @package Nayjest\Grids
+ * @package Centeron\Grids
  */
 class FieldConfig
 {
@@ -289,7 +289,7 @@ class FieldConfig
      * @param string $class
      * @return FilterConfig
      */
-    public function makeFilter($class = '\Nayjest\Grids\FilterConfig')
+    public function makeFilter($class = '\Centeron\Grids\FilterConfig')
     {
         $filter = new $class;
         $this->addFilter($filter);

@@ -1,14 +1,14 @@
 <?php
-namespace Nayjest\Grids\Components;
+namespace Centeron\Grids\Components;
 
-use Nayjest\Grids\Components\Base\RenderableComponent;
+use Centeron\Grids\Components\Base\RenderableComponent;
 
 /**
  * Class ColumnsHider
  *
  * The component renders control for showing/hiding columns.
  *
- * @package Nayjest\Grids\Components
+ * @package Centeron\Grids\Components
  */
 class ColumnsHider extends RenderableComponent
 {

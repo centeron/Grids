@@ -1,11 +1,11 @@
 <?php
-namespace Nayjest\Grids\Components;
+namespace Centeron\Grids\Components;
 
 use DomainException;
 use Illuminate\Foundation\Application;
 use Illuminate\Pagination\Paginator;
-use Nayjest\Grids\Components\Base\RenderableComponent;
-use Nayjest\Grids\Grid;
+use Centeron\Grids\Components\Base\RenderableComponent;
+use Centeron\Grids\Grid;
 
 class Pager extends RenderableComponent
 {

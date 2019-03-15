@@ -1,5 +1,5 @@
 <?php
-namespace Nayjest\Grids\Components;
+namespace Centeron\Grids\Components;
 
 class SelectFilter extends Filter
 {
