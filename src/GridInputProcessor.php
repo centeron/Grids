@@ -37,7 +37,7 @@ class GridInputProcessor
 
     protected function loadInput()
     {
-        $this->input = Input::get($this->getKey(), []);
+         $this->input = Request::input($this->getKey(), []);
     }
 
     /**
