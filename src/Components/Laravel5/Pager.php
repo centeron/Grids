@@ -5,6 +5,7 @@ use Illuminate\Pagination\Paginator;
 use Input;
 use Centeron\Grids\Components\Base\RenderableComponent;
 use Centeron\Grids\Grid;
+use Request;
 
 class Pager extends RenderableComponent
 {
@@ -24,7 +25,7 @@ class Pager extends RenderableComponent
     protected function setupPaginationForReading()
     {
         Paginator::currentPageResolver(function () {
-            return Input::get("$this->input_key.page", 1);
+            return Request::input("$this->input_key.page", 1);
         });
     }
 
